@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Address</th>
+      <th>Dept Num</th>
+      <th>Operations</th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let employee of employees">
+        <td>{{employee.employeeId}}</td> 
+        <td>{{employee.employeeName}}</td> 
+        <td>{{employee.salary}}</td> 
+        <td>{{employee.address}}</td> 
+        <td>{{employee.deptNum}}</td>
+        <td><button class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+        &nbsp;<button class="btn btn-primary" (click)="updateEmployee(employee)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="newEmployee()">New Employee</button>
+</div>
